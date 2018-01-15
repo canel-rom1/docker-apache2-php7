@@ -12,7 +12,7 @@ RUN apt-get update \
 
 RUN a2enmod php7.0
 
-COPY ./conf/phpinfo.php /var/www/html
+COPY ./conf/html/phpinfo.php /var/www/html
 
 VOLUME /var/www/html
 
