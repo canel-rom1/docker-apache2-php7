@@ -8,7 +8,9 @@ RUN apt-get update \
  && apt-get -y -q --no-install-recommends \
             install libapache2-mod-php7.0 \
                     php7.0 \
-                    php7.0-mysql
+                    php7.0-mbstring \
+                    php7.0-mysql \
+                    php7.0-xml
 
 RUN a2enmod php7.0
 
