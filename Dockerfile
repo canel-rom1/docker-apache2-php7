@@ -1,7 +1,7 @@
 FROM canelrom1/apache2:latest
-MAINTAINER rom1 <rom1@canel.ch> - CANEL - https://www.canel.ch
 
-LABEL date="14/01/18"
+LABEL maintainer="rom1 <rom1@canel.ch> - CANEL - https://www.canel.ch"
+LABEL date="27/01/18"
 LABEL description="Serveur HTTP + PHP5: apache2"
 
 RUN apt-get update \
