@@ -1,6 +1,6 @@
 FROM canelrom1/apache:latest
 
-LABEL maintainer="Rom1 <rom1@canel.ch> - Musée Bolo - https://www.bolo.ch"
+LABEL maintainer="Rom1 <rom1@canel.ch> - CANEL - https://www.canel.ch"
 LABEL date="07/11/2018"
 LABEL description="Serveur HTTP + PHP7"
 
