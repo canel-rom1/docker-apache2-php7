@@ -1,4 +1,4 @@
-FROM canelrom1/apache:latest
+FROM canelrom1/apache2:latest
 
 LABEL maintainer="Rom1 <rom1@canel.ch> - CANEL - https://www.canel.ch"
 LABEL date="07/11/2018"
