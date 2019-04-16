@@ -2,10 +2,7 @@ prefix  ?= canelrom1
 name    ?= apache-php7
 tag     ?= $(shell date +%y%m%d.%H%M%S)
 
-env_file = ./environment.conf
-
-
-img_id_file = ./.imagesid
+DC_FILE ?= docker-compose.yml
 
 all: build
 
@@ -24,6 +21,12 @@ stop:
 
 rm: stop
 	docker rm $(name)
+
+up:
+	docker-compose -f $(DC_FILE) up -d
+
+down:
+	docker-compose -f $(DC_FILE) down
 
 clean-docker: clean-docker-latest
 	docker rmi $(prefix)/$(name):$(tag)
