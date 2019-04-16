@@ -1,5 +1,8 @@
 # Change Log
-## 19.03.02
+## 16/04/2019
+- Add up/down in Makefile and use an environment variable with docker-compose up
+- Create many docker-compose files
+## 02/03/2019
 - Redesign project to Alpine
 ## 18.01.27
 - Delete MAINTAINER (deprecated)
