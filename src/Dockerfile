@@ -7,6 +7,7 @@ LABEL description="Serveur HTTP + PHP7"
 RUN apk update \
  && apk add php7 \
             php7-apache2 \
+            php7-dev \
             php7-json \
             php7-mysqli \
             php7-pear \
