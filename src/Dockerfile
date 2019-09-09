@@ -16,5 +16,8 @@ COPY ./www/phpinfo.php /var/www/html/
 EXPOSE 80
 EXPOSE 443
 
-ENTRYPOINT ["/entrypoint.sh"]
+COPY ./docker-entrypoint.sh /docker-entrypoint.sh
+RUN chmod +x /docker-entrypoint.sh
+
+ENTRYPOINT ["/docker-entrypoint.sh"]
 CMD ["apache2"]

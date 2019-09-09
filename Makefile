@@ -1,6 +1,6 @@
 prefix  ?= canelrom1
 name    ?= apache-php7
-tag     ?= $(shell date +%y%m%d.%H%M%S)
+tag     ?= $(shell date +%Y%m%d.%H%M%S)
 
 DC_FILE ?= docker-compose.yml
 

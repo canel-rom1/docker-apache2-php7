@@ -3,6 +3,12 @@
 set -e
 trap "echo SIGNAL" HUP INT QUIT KILL TERM
 
+ENTRYPOINT="/entrypoint.sh"
+if [ -f "${ENTRYPOINT}" ]
+then
+        source ${ENTRYPOINT}
+fi
+
 if [ "${1:0:1}" = "-" ] ; then
 	exec /usr/sbin/httpd "$@"
 fi
