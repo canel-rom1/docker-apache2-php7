@@ -5,7 +5,8 @@ LABEL date="09/09/2019"
 LABEL description="Serveur HTTP + PHP7"
 
 RUN apk update \
- && apk add php7 \
+ && apk add msmtp \
+            php7 \
             php7-apache2 \
             php7-dev \
             php7-json \
@@ -13,7 +14,10 @@ RUN apk update \
             php7-pear \
             php7-session
 
+RUN ln -fs /usr/bin/msmtp /usr/sbin/sendmail
+
 COPY ./www/phpinfo.php /var/www/html/
+COPY ./conf/msmtprc /etc/msmtprc
 
 EXPOSE 80
 EXPOSE 443
