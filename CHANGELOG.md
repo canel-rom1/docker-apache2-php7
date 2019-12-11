@@ -1,4 +1,7 @@
 # Change Log
+## 11/12/2019
+- Add msmtp for sending mails
+- Create a directory for entrypoints
 ## 16/04/2019
 - Add up/down in Makefile and use an environment variable with docker-compose up
 - Create many docker-compose files

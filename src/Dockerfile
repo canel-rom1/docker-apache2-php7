@@ -1,7 +1,7 @@
 FROM canelrom1/apache2:latest
 
 LABEL maintainer="Rom1 <rom1@canel.ch> - CANEL - https://www.canel.ch"
-LABEL date="09/09/2019"
+LABEL date="11/12/2019"
 LABEL description="Serveur HTTP + PHP7"
 
 RUN apk update \
@@ -22,8 +22,8 @@ COPY ./conf/msmtprc /etc/msmtprc
 EXPOSE 80
 EXPOSE 443
 
-COPY ./docker-entrypoint.sh /docker-entrypoint.sh
-RUN chmod +x /docker-entrypoint.sh
+COPY ./entrypoint-php.sh /entrypoints/20-php.sh
+RUN chmod +x /docker-entrypoint.sh /entrypoints/20-php.sh
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
 CMD ["apache2"]
