@@ -1,4 +1,4 @@
-version: '3.4'
+version: '3.7'
 services:
   site:
     image: canelrom1/apache2-php7:latest
