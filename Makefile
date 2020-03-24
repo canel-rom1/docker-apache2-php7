@@ -7,7 +7,7 @@ DC_FILE ?= docker-compose.yml
 all: build
 
 run:
-	docker run -it --name $(name) $(prefix)/$(name):latest sh
+	docker run -it --rm $(prefix)/$(name):latest sh
 
 build: src/Dockerfile
 	docker build -t $(prefix)/$(name):$(tag) src

@@ -1,7 +1,7 @@
 FROM canelrom1/apache2:latest
 
 LABEL maintainer="Rom1 <rom1@canel.ch> - CANEL - https://www.canel.ch"
-LABEL date="11/12/2019"
+LABEL date="24/03/2020"
 LABEL description="Serveur HTTP + PHP7"
 
 RUN apk update \
