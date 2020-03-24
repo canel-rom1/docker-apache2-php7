@@ -24,7 +24,7 @@ EXPOSE 80
 EXPOSE 443
 
 COPY ./entrypoint-php.sh /entrypoints/20-php.sh
-RUN chmod +x /docker-entrypoint.sh /entrypoints/20-php.sh
+RUN chmod +x /entrypoints/20-php.sh
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
 CMD ["apache2"]
