@@ -5,7 +5,8 @@ LABEL date="11/12/2019"
 LABEL description="Serveur HTTP + PHP7"
 
 RUN apk update \
- && apk add msmtp \
+ && apk add --no-cache
+            msmtp \
             php7 \
             php7-apache2 \
             php7-dev \
