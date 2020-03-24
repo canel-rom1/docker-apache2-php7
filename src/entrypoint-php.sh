@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env sh
 
 # Configuration msmtp
 MSMTPRC_FILE="/etc/msmtprc"
