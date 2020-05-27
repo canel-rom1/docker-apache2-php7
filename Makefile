@@ -38,13 +38,7 @@ up:
 down:
 	docker-compose -f $(DC_FILE) down
 
-clean-docker: clean-docker-latest
-	docker rmi $(prefix)/$(name):$(tag)
-
-clean-docker-latest:
-	docker rmi $(prefix)/$(name):latest
-
-clean: clean-docker clean-old-images
+clean:
 
 monitor:
 	docker exec -it $(name) $(use_shell)
