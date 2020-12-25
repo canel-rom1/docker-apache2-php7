@@ -1,11 +1,10 @@
-FROM canelrom1/apache2:0.5.1
+FROM canelrom1/apache2:0.6
 
 LABEL maintainer="Rom1 <rom1@canel.ch> - CANEL - https://www.canel.ch"
 LABEL date="24/03/2020"
 LABEL description="Serveur HTTP + PHP7"
 
-RUN apk update \
- && apk add --no-cache \
+RUN apk add --no-cache --update \
             msmtp \
             php7 \
             php7-apache2 \
